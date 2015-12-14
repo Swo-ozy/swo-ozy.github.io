@@ -11,14 +11,14 @@ height: 100%;
 }
 
 body {
-background-color: #e3f4fb;
+background: url(images/bg.jpg);
 background-repeat:no-repeat;
-background-position:center center;
-background-attachment:fixed;
+background-attachment:scroll;
+background-position:top center;
 -o-background-size: 100% 100%, auto;
 -moz-background-size: 100% 100%, auto;
 -webkit-background-size: 100% 100%, auto;
-background-size: cover;
+background-size: 2100px;
 font-family: Calibri Light;
 }
 
@@ -63,8 +63,7 @@ margin:0 auto;
 text-align: center;
 }
 .logo {
-background: #fff;
-height: 110px;
+height: 200px;
 width: 1050px;
 float: center;
 text-align: center;
@@ -116,6 +115,7 @@ background: #fff;
 display: block;
 width: 1050px;
 margin:0 auto;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .content_center {
 background: #fff;
@@ -135,6 +135,7 @@ text-align: center;
 font-size: 14px;
 color: #000;
 margin:0 auto;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .gl{
