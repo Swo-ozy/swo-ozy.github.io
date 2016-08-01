@@ -11,10 +11,15 @@ height: 100%;
 }
 
 body {
-background: #fff;
+background: url(/images/bg.jpg);
+background-repeat:no-repeat;
+background-position:center center;
+background-attachment:fixed;
+-o-background-size: 100% 100%, auto;
+-moz-background-size: 100% 100%, auto;
+-webkit-background-size: 100% 100%, auto;
+background-size: cover;
 font-family: Calibri Light;
-font-size: 13pt;
-height: 100%;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
@@ -23,11 +28,7 @@ margin:0;
 padding:0;
 vertical-align:baseline;
 }
-p
-{
-text-indent: 20px;
-text-align: justify;
-}
+
 
 h1, h2, h3, h4, h5, h6{
 font-family:"wf_SegoeUI","Tahoma","Verdana","Arial","sans-serif";
@@ -43,75 +44,56 @@ list-style-type:none;
 }
 TABLE {
 border-collapse: collapse;
-width: 100%;
 }
 TD, TH {
 padding: 10px;
-border: 0px solid #ccc;
+border: 1px solid #ccc;
 text-align: center;
-width: 50%;
 }
 a{
 text-decoration: none;
 color: #333333;
 }
 
-figure.img 
-{
-  margin: 0;
-  text-align: center;
-}
-figure.img img 
-{
-  max-width: 100%;
-  height: auto;
-}
-figure.img figcaption 
-{
-  padding: 0 1%;
-  font: italic 90% Georgia,serif;
-}
-
-
-.cen {
-    text-align: center; 
-   }
-   
 .head {
 background: #4b4c4d;
 height: 110px;
-width: 100%; 
+width: 1020px; 
+padding: 0 25px;
 box-shadow: 0px 7px 17px -2px #000000;
 margin:0 auto;
-text-align: center;
 }
 .logo {
 width: 250px; 
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-margin: auto;
+float: left;
+text-align: center;
+margin: 8px 0;
 }
 
 .nav a{
   text-decoration:none;
-  float: center;
 }
 .nav{
-  float: center;
-  position: absolute;
+  height:110px;
+  float: right;
 }
 .nav>ul{
+  position:relative;
   list-style:none;
   padding:0;
-  margin: 20px auto;
-  float: right;
+  margin: 0 15px;
 }
 .nav>ul>li:hover {
   background: #383838;
   color: #fff;
   }
+.nav>ul>li>ul{
+  position:absolute;
+  left:0;
+  padding:0;
+  margin:0;
+  list-style:none;
+}
 
 .nav>ul>li:hover>ul li a{
   opacity:1;
@@ -121,18 +103,76 @@ margin: auto;
   -moz-transition:all .3s linear;
   -webkit-transition:all .3s linear;
 }
-
+.nav>ul>li>ul a{
+  display:block;
+  color:#222;
+  width:170px;
+  line-height:40px !important;
+  background:#eee;
+  font: 12px sans-serif;
+  font-weight: bold;
+  text-align:center;
+  padding:0 10px;
+   height:0;
+  overflow:hidden;
+  opacity:0;
+}
+.nav>ul>li>ul>li:hover a{
+background: #383838; 
+color: #fff;
+}
 .nav>ul>li{
-  float:center;
+  float:left;
   position:relative;
 }
 .nav>ul>li>a{
-  padding: 10px 40px;
+  padding:0 20px;
   color:#fff;
-  display:inline-block;
+  display:block;
+  line-height:110px !important;
   font: 14px sans-serif;
   text-decoration:none;
-  float: center;
+}
+
+#lb {
+display: inline-block;
+color:#e8e8e8;
+text-shadow: 0px 0px 0px ; 
+text-decoration: none;
+font: 14px sans-serif;
+padding: 15px 0px; 
+margin: -8px 0px; 
+width: 250px;
+background: #4b4c4d; 
+border: 0;
+text-align: center;
+outline-offset: 0px;
+}
+#lb:hover { 
+background: #383838; 
+} 
+
+.lButton { 
+display: inline-block;
+color:#e8e8e8;
+text-shadow: 0px 0px 0px ; 
+text-decoration: none;
+font: 12px sans-serif;
+padding: 15px 0px; 
+margin: 0 0px; 
+outline: none;
+width: 250px;
+background: #4b4c4d; 
+border: 0;
+} 
+.lButton:hover { 
+background: #383838; 
+} 
+ 
+
+#menu_left {
+position: fixed;
+top: 112px;
 }
 
 .ul1{
@@ -142,67 +182,33 @@ padding: 0;
 }
 
 .content {
-position: relative;
-float: left;
-width: 100%;
--moz-box-sizing: border-box; 
--webkit-box-sizing: border-box; 
-box-sizing: border-box;
+background: #fff;
+display: block;
+width: 1050px;
+margin:0 auto;
+}
+.content_center {
+background: #fff;
+display: block;
+float: right;
+width: 760px;
+padding: 10px 10px 10px 280px;
 }
 
-.gl{
-overflow: hidden;
-min-height:1750px;
-height:100%;
-position: relative;
-background: rgba(255, 255, 255, 0.2);
-padding: 25px;	
-margin: 10px 250px;
--moz-box-sizing: border-box; 
--webkit-box-sizing: border-box; 
-box-sizing: border-box; 
-word-wrap: break-word;
- box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.gl1{
-height:100%;
-position: relative;
-background: rgba(255, 255, 255, 0.2);
-padding: 25px;	
-margin: 10px 250px;
--moz-box-sizing: border-box; 
--webkit-box-sizing: border-box; 
-box-sizing: border-box; 
-word-wrap: break-word;
- box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.gl DIV { 
-position: absolute;
-}
-
-.text{
-left: 0;
-right: 550px;
-margin-left: 20px;
-}
-
-.pic {
-right: 0;
-width: 400px;
-margin-right: 20px;
-}
 
 .footer {
 background: #383838;
 height: 20px;
-width: 100%;
+width: 1050px;
 clear: both;
 text-align: center;
 font-size: 14px;
 color: #fff;
 margin:0 auto;
+}
+
+.gl{
+padding: 10px 50px;
 }
 
 #scrollup {
@@ -213,189 +219,9 @@ background: #aaa;
 border-radius: 5px; 
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
-left: 20px; 
-bottom: 20px; 
+left: 10px; 
+bottom: 10px; 
 display: none; 
 cursor: pointer;
-z-index: 50;
-}
-
-
-
-html.sb-scroll-lock.sb-active:not(.sb-static) {
-	overflow: hidden;
-}
-
-
-#sb-site, .sb-site-container {
-	/* You may now use class .sb-site-container instead of #sb-site and use your own id. However please make sure you don't set any of the following styles any differently on your id. */
-	width: 100%;
-	min-height: 100vh;
-	position: relative;
-	z-index: 2; /* Site sits above Slidebars */
-	background-image: url(bg2.jpg);	/* Default background colour, overwrite this with your own css. I suggest moving your html or body background styling here. Making this transparent will allow the Slidebars beneath to be visible. */
-}
-
-/* Micro clearfix by Nicolas Gallagher, ensures the site container hits the top and bottom of the screen. */
-#sb-site:before, #sb-site:after, .sb-site-container:before, .sb-site-container:after {
-	content: ' ';
-	display: table;
-}
-
-#sb-site:before, #sb-site:after, .sb-site-container:before, .sb-site-container:after {
-    clear: both;
-}
-
-/* ---------------
- * 003 - Slidebars
- */
-
-.sb-slidebar {
-	height: 100%;
-	overflow-y: auto; /* Enable vertical scrolling on Slidebars when needed. */
-	position: fixed;
-	top: 0;
-	z-index: 0; /* Slidebars sit behind sb-site. */
-	display: none; /* Initially hide the Slidebars. Changed from visibility to display to allow -webkit-overflow-scrolling. */
-	background-color: #222222; /* Default Slidebars background colour, overwrite this with your own css. */
-}
-
-.sb-slidebar, .sb-slidebar * {
-	-webkit-transform: translateZ( 0px ); /* Fixes issues with translated and z-indexed elements on iOS 7. */
-}
-
-.sb-left {
-	left: 0; /* Set Slidebar to the left. */
-}
-
-.sb-right {
-	right: 0; /* Set Slidebar to the right. */
-}
-
-html.sb-static .sb-slidebar,
-.sb-slidebar.sb-static {
-	position: absolute; /* Makes Slidebars scroll naturally with the site, and unfixes them for Android Browser < 3 and iOS < 5. */
-}
-
-.sb-slidebar.sb-active {
-	display: block; /* Makes Slidebars visibile when open. Changed from visibility to display to allow -webkit-overflow-scrolling. */
-}
-
-.sb-style-overlay {
-	z-index: 9999; /* Set z-index high to ensure it overlays any other site elements. */
-}
-
-.sb-momentum-scrolling {
-	-webkit-overflow-scrolling: touch; /* Adds native momentum scrolling for iOS & Android devices. */
-}
-
-/* Slidebar widths for browsers/devices that don't support media queries. */
-	.sb-slidebar {
-		width: 30%;
-	}
-	
-	.sb-width-thin {
-		width: 15%;
-	}
-	
-	.sb-width-wide {
-		width: 45%;
-	}
-
-@media (max-width: 480px) { /* Slidebar widths on extra small screens. */
-	.sb-slidebar {
-		width: 70%;
-	}
-	
-	.sb-width-thin {
-		width: 55%;
-	}
-	
-	.sb-width-wide {
-		width: 85%;
-	}
-}
-
-@media (min-width: 481px) { /* Slidebar widths on small screens. */
-	.sb-slidebar {
-		width: 55%;
-	}
-	
-	.sb-width-thin {
-		width: 40%;
-	}
-	
-	.sb-width-wide {
-		width: 70%;
-	}
-}
-
-@media (min-width: 768px) { /* Slidebar widths on medium screens. */
-	.sb-slidebar {
-		width: 40%;
-	}
-	
-	.sb-width-thin {
-		width: 25%;
-	}
-	
-	.sb-width-wide {
-		width: 55%;
-	}
-}
-
-@media (min-width: 992px) { /* Slidebar widths on large screens. */
-	.sb-slidebar {
-		width: 30%;
-	}
-	
-	.sb-width-thin {
-		width: 15%;
-	}
-	
-	.sb-width-wide {
-		width: 45%;
-	}
-}
-
-@media (min-width: 1200px) { /* Slidebar widths on extra large screens. */
-	.sb-slidebar {
-		width: 20%;
-	}
-	
-	.sb-width-thin {
-		width: 5%;
-	}
-	
-	.sb-width-wide {
-		width: 35%;
-	}
-}
-
-/* ---------------
- * 004 - Animation
- */
-
-.sb-slide, #sb-site, .sb-site-container, .sb-slidebar {
-	-webkit-transform: translate( 0px );
-	   -moz-transform: translate( 0px );
-	     -o-transform: translate( 0px );
-	        transform: translate( 0px );
-	
-	-webkit-transition: -webkit-transform 400ms ease;
-	   -moz-transition:    -moz-transform 400ms ease;
-	     -o-transition:      -o-transform 400ms ease;
-	        transition:         transform 400ms ease;
-	
-	-webkit-transition-property: -webkit-transform, left, right; /* Add left/right for Android < 4.4. */
-	-webkit-backface-visibility: hidden; /* Prevents flickering. This is non essential, and you may remove it if your having problems with fixed background images in Chrome. */
-}
-
-/* --------------------
- * 005 - Helper Classes
- */
- 
-.sb-hide { 
-	display: none; /* Optionally applied to control classes when Slidebars is disabled over a certain width. */
 }
   
